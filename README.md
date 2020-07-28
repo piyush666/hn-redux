@@ -1,3 +1,11 @@
+this is simple hackernews client app.
+
+topics:
+react
+redux
+redux-saga
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
