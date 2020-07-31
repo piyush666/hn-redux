@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { doFetchStories } from '../actions/story';
 import { connect } from 'react-redux';
+import { Form, Button, Col } from 'react-bootstrap';
 
 const applyQueryState = query => ({
     query
@@ -32,14 +33,20 @@ class SearchStories extends Component {
 
     render() {
         return (
-            <form onSubmit={this.onSubmit}>
-                <input
-                    type='text'
-                    value={this.state.query}
-                    onChange={this.onChange}
-                />
-                <button type='submit'>Search</button>
-            </form>
+            <Form onSubmit={this.onSubmit}>
+                <Form.Row>
+                    <Col md={10}>
+                    <Form.Control
+                        type='text'
+                        value={this.state.query}
+                        onChange={this.onChange}
+                    />
+                    </Col>
+                    <Col>
+                    <Button variant="outline-secondary" type='submit'>Search</Button>
+                    </Col>
+                </Form.Row>
+            </Form>
         );
     }
 }
